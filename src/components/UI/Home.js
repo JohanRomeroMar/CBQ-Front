@@ -11,20 +11,19 @@ import { Navbar } from './Navbar';
 export const Home = () => {
     return (
         <>
+            <Navbar />
             <div className="App">
-        <header className="info">
-           
-            <Main/>
-        </header>
-        <div>
-            <main>
-                <Rols/>
-                <Information/>
-            </main>
-            <Footer/>
-        </div>
-    </div>
-  
+                <header className="info">
+                    <Main />
+                </header>
+                <div>
+                    <main>
+                        <Rols />
+                        <Information />
+                    </main>
+                    <Footer />
+                </div>
+            </div>
         </>
     )
 }

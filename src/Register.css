@@ -1,24 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-
-:root {
-    --gold1: #BEE6E5;
-    --gold2: #9ee7e6;
-    --gray: #ffffff80;
-    --gray2: #f7d9d990;
-    --black1: #175F77;
-    --black2: #0C425A;
-    --shadow: 0 8px 8px;
-    --color_shadow: #00000033;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-body {
+.body-register {
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -27,7 +7,7 @@ body {
     background: linear-gradient(180deg, var(--black1) 0%, var(--black2) 100%);
 }
 
-.container {
+.container-register {
     max-width: 700px;
     width: 100%;
     background-color: #fff;
@@ -36,13 +16,13 @@ body {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
 
-.container .title {
+.container-register .title2 {
     font-size: 25px;
     font-weight: 500;
     position: relative;
 }
 
-.container .title::before {
+.container-register .title2::before {
     content: "";
     position: absolute;
     left: 0;
