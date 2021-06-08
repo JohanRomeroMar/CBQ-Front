@@ -12,7 +12,6 @@ import { Registro } from '../components/UI/Registro';
 import { Perfiles } from '../components/UI/Perfiles';
 import { Informacion } from '../components/UI/Informacion';
 import { Contacto } from '../components/UI/Contacto';
-import { Navbar } from '../components/UI/Navbar';
 import { Usuarios } from '../components/UI/Usuarios';
 
 export const Routers = () => {

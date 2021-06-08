@@ -44,6 +44,9 @@
     margin-bottom: 10px;
 }
 
+.users-information{
+    margin-bottom: 0px;
+}
 @media screen and (max-width:500px) {
     .users {
         height: 122px;
