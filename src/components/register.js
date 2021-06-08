@@ -33,6 +33,12 @@ const Register = ()=>{
         console.log(gender);
     },[gender])
 
+<<<<<<< HEAD
+=======
+
+class Register extends Component {
+    render() {
+>>>>>>> refs/remotes/master/master
         return (
             <>
                 <div class="body-register">
