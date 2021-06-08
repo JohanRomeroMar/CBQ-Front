@@ -21,6 +21,7 @@ export const Routers = () => {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/Registro" component={Registro} />
+          <Route exact path="/Actualizar/:id" component={Registro} />
           <Route exact path="/Perfiles" component={Perfiles} />
           <Route exact path="/Informacion" component={Informacion} />
           <Route exact path="/Contacto" component={Contacto} />

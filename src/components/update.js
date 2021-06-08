@@ -2,7 +2,7 @@ import axios from 'axios';//peticiones
 import React, { Component, useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 
-const Register = () => {
+const Update = () => {
     const [fName, setFirstName] = useState()
     const [lName, setLastName] = useState()
     const [docType, setDocType] = useState()
@@ -11,11 +11,32 @@ const Register = () => {
     const [email, setEmail] = useState()
     const [phoneNum, setPhoneNum] = useState()
     const [gender, setGender] = useState()
+    const [user, setUser] = useState()
+
+    const id = useParams();
 
 
     const postUsers = async (data) => {
         return axios.post('http://localhost:4000/api/auth/register', data);
     }
+
+    const getUser = async (id) => {
+        return axios.get(`http://localhost:4000/api/auth/user/${id}`);
+    }
+
+    useEffect(() => {//solo ejecuta cuando entra
+        getUser(id).then(result => {
+            setUser(result.data);
+        })
+        if(typeof id !== 'undefined'){
+            
+        }
+    }, [])
+
+    useEffect(()=>{
+        setFirstName(user.fName);
+        setBrithDate(user.birthDate);
+    },[user])
 
 
     const handleSubmit = (e) => {
@@ -40,22 +61,22 @@ const Register = () => {
 
     return (
         <>
-            <div class="body-register">
-                <div class="container-register">
-                    <div class="title2">Registro</div>
-                    <div class="content">
+            <div className="body-register">
+                <div className="container-register">
+                    <div className="title2">Registro</div>
+                    <div className="content">
                         <form onSubmit={handleSubmit}>
-                            <div class="user-details">
-                                <div class="input-box">
-                                    <span class="details">Nombres</span>
+                            <div className="user-details">
+                                <div className="input-box">
+                                    <span className="details">Nombres</span>
                                     <input type="text" placeholder="Ingresa tus nombres" onChange={(e) => { setFirstName(e.target.value) }} value={fName} required></input>
                                 </div>
-                                <div class="input-box">
-                                    <span class="details">Apellidos</span>
+                                <div className="input-box">
+                                    <span className="details">Apellidos</span>
                                     <input type="text" placeholder="Ingresa tus apellidos" onChange={(e) => { setLastName(e.target.value) }} required></input>
                                 </div>
-                                <div class="input-box">
-                                    <span class="details">Tipo de documento</span>
+                                <div className="input-box">
+                                    <span className="details">Tipo de documento</span>
                                     <select required onChange={(e) => { setDocType(e.target.value) }}>
                                         <option selected value="">Tipo de documento</option>
                                         <option value="1">Tarjeta de identidad</option>
@@ -63,25 +84,25 @@ const Register = () => {
                                         <option value="3">Pasaporte</option>
                                     </select>
                                 </div>
-                                <div class="input-box">
-                                    <span class="details">Documento</span>
+                                <div className="input-box">
+                                    <span className="details">Documento</span>
                                     <input type="text" placeholder="Ingresa tu documento" onChange={(e) => { setDoc(e.target.value) }} required></input>
                                 </div>
-                                <div class="input-box">
-                                    <span class="details">Fecha de nacimiento</span>
+                                <div className="input-box">
+                                    <span className="details">Fecha de nacimiento</span>
                                     <input type="date" onChange={(e) => { setBrithDate(e.target.value) }} value={birthDate} required></input>
                                 </div>
-                                <div class="input-box">
-                                    <span class="details">Correo electrónico</span>
+                                <div className="input-box">
+                                    <span className="details">Correo electrónico</span>
                                     <input type="email" placeholder="Ingresa tu correo electrónico" onChange={(e) => { setEmail(e.target.value) }} required></input>
                                 </div>
-                                <div class="input-box">
-                                    <span class="details">Número de celular</span>
+                                <div className="input-box">
+                                    <span className="details">Número de celular</span>
                                     <input type="text" placeholder="Ingresa tu número de celular" onChange={(e) => { setPhoneNum(e.target.value) }} required></input>
                                 </div>
 
-                                <div class="input-box">
-                                    <span class="details">Genero</span>
+                                <div className="input-box">
+                                    <span className="details">Genero</span>
                                     <select aria-label="Genero" onChange={(e) => { setGender(e.target.value) }} required>
                                         <option selected value="">Genero</option>
                                         <option value="1">Masculino</option>
@@ -90,7 +111,7 @@ const Register = () => {
                                     </select>
                                 </div>
                             </div>
-                            <div class="button">
+                            <div className="button">
                                 <input type="submit" value="Registrar"></input>
                             </div>
                         </form>
@@ -102,4 +123,4 @@ const Register = () => {
 
 }
 
-export default Register;
+export default Update;
