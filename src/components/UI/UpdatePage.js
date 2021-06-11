@@ -4,7 +4,7 @@ import Register from '../register.js'
 import '../../Register.css';
 import Update from '../update';
 
-export const Registro = () => {
+export const UpdatePage = () => {
     return (
         <>
             <Update/>

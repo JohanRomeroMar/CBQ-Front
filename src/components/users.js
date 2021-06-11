@@ -1,6 +1,6 @@
 import axios from 'axios';//peticiones
 import React, { Component, useEffect, useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Users = () => {//componente de estados
     const [nombre, setNombre] = useState()
@@ -62,7 +62,7 @@ const Users = () => {//componente de estados
                                             <p className="users-information">Tipo de usuario: {"estudiente"}</p>
                                         </div>
                                         <div className="button">
-                                            
+                                            <NavLink to={`/actualizar/${item._id}`}>Actualizar</NavLink>
                                             <button value="Eliminar" onClick={() => handleOnDelete(item._id)}></button>
                                         </div>
                                     </div>

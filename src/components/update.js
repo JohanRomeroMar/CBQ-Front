@@ -13,11 +13,11 @@ const Update = () => {
     const [gender, setGender] = useState()
     const [user, setUser] = useState()
 
-    const id = useParams();
-
+    const {id} = useParams();
+    
 
     const postUsers = async (data) => {
-        return axios.post('http://localhost:4000/api/auth/register', data);
+        return axios.put(`http://localhost:4000/api/auth//userUpdate/${id}`, data);
     }
 
     const getUser = async (id) => {
@@ -26,16 +26,20 @@ const Update = () => {
 
     useEffect(() => {//solo ejecuta cuando entra
         getUser(id).then(result => {
-            setUser(result.data);
-        })
-        if(typeof id !== 'undefined'){
             
-        }
+            setFirstName(result.data.fName);
+            setLastName(result.data.lName);
+            setDocType(result.data.docType);
+            setDoc(result.data.doc);
+            setBrithDate(result.data.birthDate);
+            setEmail(result.data.email);
+            setPhoneNum(result.data.phoneNum);
+            setGender(result.data.gender);
+        })
     }, [])
 
     useEffect(()=>{
-        setFirstName(user.fName);
-        setBrithDate(user.birthDate);
+        
     },[user])
 
 
@@ -63,21 +67,21 @@ const Update = () => {
         <>
             <div className="body-register">
                 <div className="container-register">
-                    <div className="title2">Registro</div>
+                    <div className="title2">Actualizar</div>
                     <div className="content">
                         <form onSubmit={handleSubmit}>
                             <div className="user-details">
                                 <div className="input-box">
                                     <span className="details">Nombres</span>
-                                    <input type="text" placeholder="Ingresa tus nombres" onChange={(e) => { setFirstName(e.target.value) }} value={fName} required></input>
+                                    <input type="text" placeholder="Ingresa tus nombres" onChange={(e) => { setFirstName(e.target.value) }} value={`${fName}`} required></input>
                                 </div>
                                 <div className="input-box">
                                     <span className="details">Apellidos</span>
-                                    <input type="text" placeholder="Ingresa tus apellidos" onChange={(e) => { setLastName(e.target.value) }} required></input>
+                                    <input type="text" placeholder="Ingresa tus apellidos" onChange={(e) => { setLastName(e.target.value) }} value={`${lName}`} required></input>
                                 </div>
                                 <div className="input-box">
                                     <span className="details">Tipo de documento</span>
-                                    <select required onChange={(e) => { setDocType(e.target.value) }}>
+                                    <select required onChange={(e) => { setDocType(e.target.value) }} value={`${docType}`}>
                                         <option selected value="">Tipo de documento</option>
                                         <option value="1">Tarjeta de identidad</option>
                                         <option value="2">Cedula de ciudania</option>
@@ -86,7 +90,7 @@ const Update = () => {
                                 </div>
                                 <div className="input-box">
                                     <span className="details">Documento</span>
-                                    <input type="text" placeholder="Ingresa tu documento" onChange={(e) => { setDoc(e.target.value) }} required></input>
+                                    <input type="text" placeholder="Ingresa tu documento" onChange={(e) => { setDoc(e.target.value) }} value={`${doc}`} required></input>
                                 </div>
                                 <div className="input-box">
                                     <span className="details">Fecha de nacimiento</span>
@@ -94,16 +98,16 @@ const Update = () => {
                                 </div>
                                 <div className="input-box">
                                     <span className="details">Correo electrónico</span>
-                                    <input type="email" placeholder="Ingresa tu correo electrónico" onChange={(e) => { setEmail(e.target.value) }} required></input>
+                                    <input type="email" placeholder="Ingresa tu correo electrónico" onChange={(e) => { setEmail(e.target.value) }} value={`${email}`} required></input>
                                 </div>
                                 <div className="input-box">
                                     <span className="details">Número de celular</span>
-                                    <input type="text" placeholder="Ingresa tu número de celular" onChange={(e) => { setPhoneNum(e.target.value) }} required></input>
+                                    <input type="text" placeholder="Ingresa tu número de celular" onChange={(e) => { setPhoneNum(e.target.value) }} value={`${phoneNum}`} required></input>
                                 </div>
 
                                 <div className="input-box">
                                     <span className="details">Genero</span>
-                                    <select aria-label="Genero" onChange={(e) => { setGender(e.target.value) }} required>
+                                    <select aria-label="Genero" onChange={(e) => { setGender(e.target.value) }} value={`${gender}`} required>
                                         <option selected value="">Genero</option>
                                         <option value="1">Masculino</option>
                                         <option value="2">Femenino</option>
@@ -112,7 +116,7 @@ const Update = () => {
                                 </div>
                             </div>
                             <div className="button">
-                                <input type="submit" value="Registrar"></input>
+                                <input type="submit" value="Actualizar"></input>
                             </div>
                         </form>
                     </div>

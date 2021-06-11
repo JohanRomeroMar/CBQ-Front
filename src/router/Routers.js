@@ -13,6 +13,7 @@ import { Perfiles } from '../components/UI/Perfiles';
 import { Informacion } from '../components/UI/Informacion';
 import { Contacto } from '../components/UI/Contacto';
 import { Usuarios } from '../components/UI/Usuarios';
+import { UpdatePage } from '../components/UI/UpdatePage';
 
 export const Routers = () => {
   return (
@@ -20,12 +21,12 @@ export const Routers = () => {
       <>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/Registro" component={Registro} />
-          <Route exact path="/Actualizar/:id" component={Registro} />
-          <Route exact path="/Perfiles" component={Perfiles} />
-          <Route exact path="/Informacion" component={Informacion} />
-          <Route exact path="/Contacto" component={Contacto} />
-          <Route exact path="/Users" component={Usuarios} />
+          <Route exact path="/registro" component={Registro} />
+          <Route exact path="/actualizar/:id" component={UpdatePage} />
+          <Route exact path="/perfiles" component={Perfiles} />
+          <Route exact path="/informacion" component={Informacion} />
+          <Route exact path="/contacto" component={Contacto} />
+          <Route exact path="/users" component={Usuarios} />
           <Redirect to="/" component={Home} />
         </Switch>
 
