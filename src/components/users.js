@@ -20,7 +20,7 @@ const Users = () => {//componente de estados
 
     const handleOnDelete = (id) => {
         deleteUser(id).then(result => {
-            setUsers(users.filter(item => item._id!=id));
+            setUsers(users.filter(item => item._id != id));
         })
     }
 
@@ -52,22 +52,21 @@ const Users = () => {//componente de estados
                 users.map(item => {
                     return (
                         <>
-                            
-                                <div>
-                                    <div className="users">
-                                        <i className="fas fa-user"></i>
-                                        <div className="users-info">
-                                            <p className="users-information">Nombre:  {item.fName + " " + item.lName}</p>
-                                            <p className="users-information">Documento: {item.doc}</p>
-                                            <p className="users-information">Tipo de usuario: {"estudiente"}</p>
-                                        </div>
-                                        <NavLink to={`/actualizar/${item._id}`}>Actualizar</NavLink>
-                                        <div className="button">
-                                            <button value="Eliminar" onClick={() => handleOnDelete(item._id)}></button>
-                                        </div>
+
+                            <div>
+                                <div className="users">
+                                    <i className="fas fa-user"></i>
+                                    <div className="users-info">
+                                        <p className="users-information">Nombre:  {item.fName + " " + item.lName}</p>
+                                        <p className="users-information">Documento: {item.doc}</p>
+                                        <p className="users-information">Tipo de usuario: {"estudiente"}</p>
+                                    </div>
+                                    <div className="button">
+                                        <NavLink className="delete-a" to={`/actualizar/${item._id}`}>Actualizar</NavLink>
+                                        <button className="delete" type="button" onClick={() => handleOnDelete(item._id)}>Eliminar</button>
                                     </div>
                                 </div>
-                            
+                            </div>
 
                         </>
                     )
