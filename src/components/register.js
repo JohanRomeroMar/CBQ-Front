@@ -1,6 +1,7 @@
 import axios from 'axios';//peticiones
-import React, { Component, useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+import React, { Component, useEffect, useState, useContext } from 'react';
+import { usecontext } from '../Hooks/useContext';
+import { useHistory } from "react-router-dom";
 
 const Register = () => {
     const [fName, setFirstName] = useState()
@@ -11,32 +12,21 @@ const Register = () => {
     const [email, setEmail] = useState()
     const [phoneNum, setPhoneNum] = useState()
     const [gender, setGender] = useState()
+    
+    const history = useHistory()
+    //const [CBQA,]
 
-
-    const postUsers = async (data) => {
-        return axios.post('http://localhost:4000/api/auth/register', data);
-    }
-
-
+    const {datos, setDatos} = useContext(usecontext)
+    
     const handleSubmit = (e) => {
         e.preventDefault();
         const data = {
             fName, lName, docType, doc, birthDate, email, phoneNum, gender
         }
-        postUsers(data).then(result => {
-            console.log('usuario guardado');
-        });
+        setDatos(data);
+        history.replace('/CBQ')
+        console.log(data);
     }
-
-    
-
-    useEffect(() => {
-        console.log(docType);
-    }, [docType])
-
-    useEffect(() => {
-        console.log(gender);
-    }, [gender])
 
     return (
         <>
@@ -91,7 +81,8 @@ const Register = () => {
                                 </div>
                             </div>
                             <div class="button">
-                                <input type="submit" value="Registrar"></input>
+                                {/* <NavLink to={`/CBQ`}></NavLink> */}
+                                <input type="submit" value="Iniciar" onSubmit={handleSubmit}></input>
                             </div>
                         </form>
                     </div>
