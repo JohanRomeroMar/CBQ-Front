@@ -1,0 +1,117 @@
+:root {
+    --gold1: #BEE6E5;
+    --gold2: #9ee7e6;
+    --gray: #ffffff80;
+    --gray2: #f7d9d990;
+    --black1: #175F77;
+    --black2: #0C425A;
+    --shadow: 0 8px 8px;
+    --color_shadow: #00000033;
+}
+
+body {
+    background-color: var(--black1);
+}
+
+.question-title {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 375;
+    text-decoration: none;
+    color: #0C425A;
+    line-height: 1.25;
+    padding: 0 0 24px 0;
+}
+
+.question-container {
+    margin-bottom: 15px;
+}
+
+.question {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    text-decoration: none;
+    color: #000000;
+    line-height: 1.25;
+}
+
+.title {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #0C425A;
+    line-height: 1.25;
+    padding-bottom: 15px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 15%);
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.question-text-area {
+    width: 100%;
+    min-height: 50px;
+    max-height: 100px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.button {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(180deg, var(--gold1) 0%, var(--gold2) 100%);
+    text-decoration: none;
+    color: var(--black2);
+    box-shadow: var(--shadow) var(--color_shadow);
+    border-radius: 6px;
+}
+
+.button-container {
+    width: 15%;
+    height: 45px;
+    margin: 35px 0;
+}
+
+.form-select {
+    color: #175F77;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+
+
+@media screen and (max-width:500px) {
+
+    .button-container {
+        width: 25%;
+    }
+
+    .question-title{
+        font-size: 15px;
+        padding: 0 0 10px 0;
+    }
+}
