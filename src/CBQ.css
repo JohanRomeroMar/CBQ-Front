@@ -46,7 +46,7 @@ body {
     box-shadow: 0 5px 10px rgb(0 0 0 / 15%);
     margin-top: 15px;
     margin-bottom: 15px;
-    width: 80%;
+    width: 75%;
 }
 
 .question-text-area {
@@ -91,6 +91,7 @@ body {
     border: 1px solid #ccc;
     border-bottom-width: 2px;
     transition: all 0.3s ease;
+    font-size: 15px;
 }
 
 .main-CBQ{
@@ -103,12 +104,12 @@ body {
 
 @media screen and (max-width:500px) {
 
-    .button-container {
-        width: 25%;
+    .button-container-CBQ  {
+        width: 35%;
     }
 
     .question-title{
         font-size: 15px;
-        padding: 0 0 10px 0;
+        padding: 10px 0 10px 0;
     }
 }
