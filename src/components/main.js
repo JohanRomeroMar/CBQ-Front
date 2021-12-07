@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import image from '../2.jpg';
+import image from '../4.png';
 import { Link } from "react-router-dom";
 class Main extends Component {
     render() {

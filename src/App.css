@@ -132,7 +132,7 @@ body {
 }
 
 .copy_section{
-    color: var(--black2);
+    color: var(--gold2);
     font-size: 22px;
     line-height: 32px;
     margin-bottom: 60px;
@@ -145,7 +145,7 @@ body {
 
 .container-cards{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
 }

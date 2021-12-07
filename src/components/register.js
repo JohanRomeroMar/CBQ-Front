@@ -12,12 +12,12 @@ const Register = () => {
     const [email, setEmail] = useState()
     const [phoneNum, setPhoneNum] = useState()
     const [gender, setGender] = useState()
-    
+
     const history = useHistory()
     //const [CBQA,]
 
-    const {datos, setDatos} = useContext(usecontext)
-    
+    const { datos, setDatos } = useContext(usecontext)
+
     const handleSubmit = (e) => {
         e.preventDefault();
         const data = {
@@ -56,6 +56,34 @@ const Register = () => {
                                 <div class="input-box">
                                     <span class="details">Documento</span>
                                     <input type="text" placeholder="Ingresa tu documento" onChange={(e) => { setDoc(e.target.value) }} required></input>
+                                </div>
+                                <div class="input-box">
+                                    <span class="details">Grado</span>
+                                    <select aria-label="Grado" required>
+                                        <option selected value="">Selecciona tu grado</option>
+                                        <option value="7">Septimo</option>
+                                        <option value="8">Octavo</option>
+                                        <option value="9">Noveno</option>
+                                    </select>
+                                </div>
+                                <div class="input-box">
+                                    <span class="details">Nombre del colegio</span>
+                                    <input type="text" placeholder="Ingresa el nombre de tu colegio" required></input>
+                                </div>
+                                <div class="input-box">
+                                    <span class="details">Direccion del colegio</span>
+                                    <input type="text" placeholder="Ingresa la direccion de tu colegio" required></input>
+                                </div>
+                                <div class="input-box">
+                                    <span class="details">Estrato</span>
+                                    <select aria-label="Estrato" required>
+                                        <option selected value="">Selecciona tu estrato</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
                                 </div>
                                 <div class="input-box">
                                     <span class="details">Fecha de nacimiento</span>

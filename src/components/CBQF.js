@@ -66,7 +66,7 @@ const CBQF = () => {
                             </div>
                             <div class="question">
                                 <select class="form-select" aria-label="Default select example" onChange={(e) => { setCBQ1(e.target.value) }} required>
-                                    <option selected>Seleccione una opcion</option>
+                                    <option selected value="">Seleccione una opcion</option>
                                     <option value="1">Nunca</option>
                                     <option value="2">Alguna vez</option>
                                     <option value="3">A menudo</option>
@@ -76,7 +76,7 @@ const CBQF = () => {
                         <div class="question-container">
                             <div class="question-title">2. Enviar mensajes amenazantes o insultantes por e-mail</div>
                             <select class="form-select" aria-label="Default select example" onChange={(e) => { setCBQ2(e.target.value) }} required>
-                                <option selected>Seleccione una opcion</option>
+                                <option selected value="">Seleccione una opcion</option>
                                 <option value="1">Nunca</option>
                                 <option value="2">Alguna vez</option>
                                 <option value="3">A menudo</option>
@@ -85,7 +85,7 @@ const CBQF = () => {
                         <div class="question-container">
                             <div class="question-title">3. Enviar mensajes amenazantes o insultantes por teléfono móvil</div>
                             <select class="form-select" aria-label="Default select example" onChange={(e) => { setCBQ3(e.target.value) }} required>
-                                <option selected>Seleccione una opcion</option>
+                                <option selected value="">Seleccione una opcion</option>
                                 <option value="1">Nunca</option>
                                 <option value="2">Alguna vez</option>
                                 <option value="3">A menudo</option>
@@ -99,7 +99,7 @@ const CBQF = () => {
                             </div>
                             <textarea class="question-text-area" onChange={(e) => { setCBQO4(e.target.value) }}></textarea>
                             <select class="form-select" aria-label="Default select example" onChange={(e) => { setCBQ4(e.target.value) }} required>
-                                <option selected>Seleccione una opcion</option>
+                                <option selected value="">Seleccione una opcion</option>
                                 <option value="1">Nunca</option>
                                 <option value="2">Alguna vez</option>
                                 <option value="3">A menudo</option>
@@ -111,7 +111,7 @@ const CBQF = () => {
                                 describe: </div>
                             <textarea class="question-text-area" onChange={(e) => { setCBQO5(e.target.value) }}></textarea>
                             <select class="form-select" aria-label="Default select example" onChange={(e) => { setCBQ5(e.target.value) }} required>
-                                <option selected>Seleccione una opcion</option>
+                                <option selected value="">Seleccione una opcion</option>
                                 <option value="1">Nunca</option>
                                 <option value="2">Alguna vez</option>
                                 <option value="3">A menudo</option>
@@ -122,7 +122,7 @@ const CBQF = () => {
                                 compañero/a en internet
                             </div>
                             <select class="form-select" aria-label="Default select example" onChange={(e) => { setCBQ6(e.target.value) }} required>
-                                <option selected>Seleccione una opcion</option>
+                                <option selected value="">Seleccione una opcion</option>
                                 <option value="1">Nunca</option>
                                 <option value="2">Alguna vez</option>
                                 <option value="3">A menudo</option>
@@ -134,7 +134,7 @@ const CBQF = () => {
                                 para
                                 que las leyeran. </div>
                             <select class="form-select" aria-label="Default select example" onChange={(e) => { setCBQ7(e.target.value) }} required>
-                                <option selected>Seleccione una opcion</option>
+                                <option selected value="">Seleccione una opcion</option>
                                 <option value="1">Nunca</option>
                                 <option value="2">Alguna vez</option>
                                 <option value="3">A menudo</option>
@@ -146,7 +146,7 @@ const CBQF = () => {
                                 e-mail
                                 que le podían hacer quedar mal ante los demás o crearle problemas con sus conocidos. </div>
                             <select class="form-select" aria-label="Default select example" onChange={(e) => { setCBQ8(e.target.value) }} required>
-                                <option selected>Seleccione una opcion</option>
+                                <option selected value="">Seleccione una opcion</option>
                                 <option value="1">Nunca</option>
                                 <option value="2">Alguna vez</option>
                                 <option value="3">A menudo</option>
@@ -159,7 +159,7 @@ const CBQF = () => {
                                 algo humillante o ridículo En caso afirmativo describe: </div>
                             <textarea class="question-text-area" onChange={(e) => { setCBQO9(e.target.value) }}></textarea>
                             <select class="form-select" aria-label="Default select example" onChange={(e) => { setCBQ9(e.target.value) }} required>
-                                <option selected>Seleccione una opcion</option>
+                                <option selected value="">Seleccione una opcion</option>
                                 <option value="1">Nunca</option>
                                 <option value="2">Alguna vez</option>
                                 <option value="3">A menudo</option>
@@ -168,7 +168,7 @@ const CBQF = () => {
                         <div class="question-container">
                             <div class="question-title">10.Enviar esas imágenes a otras personas </div>
                             <select class="form-select" aria-label="Default select example" onChange={(e) => { setCBQ10(e.target.value) }} required>
-                                <option selected>Seleccione una opcion</option>
+                                <option selected value="">Seleccione una opcion</option>
                                 <option value="1">Nunca</option>
                                 <option value="2">Alguna vez</option>
                                 <option value="3">A menudo</option>
@@ -181,7 +181,7 @@ const CBQF = () => {
                                 afirmativo describe: </div>
                             <textarea class="question-text-area" onChange={(e) => { setCBQO11(e.target.value) }}></textarea>
                             <select class="form-select" aria-label="Default select example" onChange={(e) => { setCBQ11(e.target.value) }} required>
-                                <option selected>Seleccione una opcion</option>
+                                <option selected value="">Seleccione una opcion</option>
                                 <option value="1">Nunca</option>
                                 <option value="2">Alguna vez</option>
                                 <option value="3">A menudo</option>
@@ -190,7 +190,7 @@ const CBQF = () => {
                         <div class="question-container">
                             <div class="question-title">12. Enviar esas imágenes grabadas a otras personas </div>
                             <select class="form-select" aria-label="Default select example" onChange={(e) => { setCBQ12(e.target.value) }} required>
-                                <option selected>Seleccione una opcion</option>
+                                <option selected value="">Seleccione una opcion</option>
                                 <option value="1">Nunca</option>
                                 <option value="2">Alguna vez</option>
                                 <option value="3">A menudo</option>
@@ -199,8 +199,8 @@ const CBQF = () => {
                         <div class="question-container">
                             <div class="question-title">13. Difundir online secretos, información comprometida o imágenes de alguien.
                             </div>
-                            <select class="form-select" aria-label="Default select example" onChange={(e) => { setCBQ13(e.target.value) }} required>
-                                <option selected>Seleccione una opcion</option>
+                            <select class="form-select" aria-label="Default select example" onChange={(e) => { setCBQ13(e.target.value) }} required="true">
+                                <option selected value="">Seleccione una opcion</option>
                                 <option value="1">Nunca</option>
                                 <option value="2">Alguna vez</option>
                                 <option value="3">A menudo</option>
@@ -211,7 +211,7 @@ const CBQF = () => {
                                 amigos, foros temáticos,
                                 etc.).</div>
                             <select class="form-select" aria-label="Default select example" onChange={(e) => { setCBQ14(e.target.value) }} required>
-                                <option selected>Seleccione una opcion</option>
+                                <option selected value="">Seleccione una opcion</option>
                                 <option value="1">Nunca</option>
                                 <option value="2">Alguna vez</option>
                                 <option value="3">A menudo</option>
@@ -223,7 +223,7 @@ const CBQF = () => {
                                 intimidatorios.
                             </div>
                             <select class="form-select" aria-label="Default select example" onChange={(e) => { setCBQ15(e.target.value) }} required>
-                                <option selected>Seleccione una opcion</option>
+                                <option selected value="">Seleccione una opcion</option>
                                 <option value="1">Nunca</option>
                                 <option value="2">Alguna vez</option>
                                 <option value="3">A menudo</option>
@@ -235,7 +235,7 @@ const CBQF = () => {
                                 índole
                                 sexual </div>
                             <select class="form-select" aria-label="Default select example" onChange={(e) => { setCBQ16(e.target.value) }} required>
-                                <option selected>Seleccione una opcion</option>
+                                <option selected value="">Seleccione una opcion</option>
                                 <option value="1">Nunca</option>
                                 <option value="2">Alguna vez</option>
                                 <option value="3">A menudo</option>
@@ -244,7 +244,7 @@ const CBQF = () => {
                         <div class="question-container">
                             <div class="question-title">17. Enviar esas imágenes a otras personas </div>
                             <select class="form-select" aria-label="Default select example" onChange={(e) => { setCBQ17(e.target.value) }} required>
-                                <option selected>Seleccione una opcion</option>
+                                <option selected value="">Seleccione una opcion</option>
                                 <option value="1">Nunca</option>
                                 <option value="2">Alguna vez</option>
                                 <option value="3">A menudo</option>

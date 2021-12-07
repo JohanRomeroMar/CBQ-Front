@@ -94,7 +94,7 @@ body {
     font-size: 15px;
 }
 
-.main-CBQ{
+.main-CBQ {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -104,11 +104,11 @@ body {
 
 @media screen and (max-width:500px) {
 
-    .button-container-CBQ  {
+    .button-container-CBQ {
         width: 35%;
     }
 
-    .question-title{
+    .question-title {
         font-size: 15px;
         padding: 10px 0 10px 0;
     }
