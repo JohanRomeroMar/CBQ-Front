@@ -68,11 +68,11 @@ const Register = () => {
                                 </div>
                                 <div class="input-box">
                                     <span class="details">Nombre del colegio</span>
-                                    <input type="text" placeholder="Ingresa el nombre de tu colegio" required></input>
+                                    <input type="text" placeholder="Nombre de tu colegio" required></input>
                                 </div>
                                 <div class="input-box">
                                     <span class="details">Direccion del colegio</span>
-                                    <input type="text" placeholder="Ingresa la direccion de tu colegio" required></input>
+                                    <input type="text" placeholder="Direccion de tu colegio" required></input>
                                 </div>
                                 <div class="input-box">
                                     <span class="details">Estrato</span>
