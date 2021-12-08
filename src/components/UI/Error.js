@@ -1,14 +1,13 @@
 import React from 'react'
 import Footer from '../footer'
 import { Navbar } from './Navbar'
-import Contact from '../contact'
 import '../../Register.css';
 
-export const Contacto = () => {
+export const Error = () => {
     return (
         <div>
             <Navbar/>
-                <Contact/>
+                <div>Ups, ¿Te equivocaste?, revisa porfavor a donde quieres ir.</div>
             <Footer/>
         </div>
     )

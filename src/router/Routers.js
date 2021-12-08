@@ -16,7 +16,8 @@ import { Usuarios } from '../components/UI/Usuarios';
 import { UpdatePage } from '../components/UI/UpdatePage';
 import { CBQ } from '../components/UI/CBQ';
 import { CBQV } from '../components/UI/CBQV';
-import { IniciarSesion } from '../components/UI/IniciarSesion'
+import { IniciarSesion } from '../components/UI/IniciarSesion';
+import { Error } from '../components/UI/Error';
 import { usecontext } from '../Hooks/useContext';
 
 
@@ -37,7 +38,7 @@ export const Routers = () => {
               <Route exact path="/CBQ" component={CBQ} />
               <Route exact path="/CBQV" component={CBQV} />
               <Route exact path="/login" component={IniciarSesion}/>
-              <Redirect exact to="/" component={Home} />
+              <Redirect exact to="/error" component={Error} />
           </Switch>
         </usecontext.Provider>
 
