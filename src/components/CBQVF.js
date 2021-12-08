@@ -51,8 +51,8 @@ const CBQVF = () => {
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
-                <div class="main-CBQ">
+            <form class="body" onSubmit={handleSubmit}>
+                <div  class="main-CBQ">
                     <div class="container-CBQ">
                         <div class="title-CBQ">CBQ-V</div>
 

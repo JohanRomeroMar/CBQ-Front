@@ -13,7 +13,7 @@ export const Perfiles = () => {
     return (
         <>
             <Navbar />
-            <div class="main-profile">
+            <div class=" body main-profile">
                 <div class="profile-container">
                     <div class="profile-title">Informacion general</div>
                     <div class="profile-info">

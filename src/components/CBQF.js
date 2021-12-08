@@ -55,7 +55,7 @@ const CBQF = () => {
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
+            <form class="body" onSubmit={handleSubmit}>
                 <div class="main-CBQ">
                     <div class="container-CBQ">
                         <div class="title-CBQ">CBQ</div>
