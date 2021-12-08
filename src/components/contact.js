@@ -26,7 +26,7 @@ const Contact = () => {
         <>
             <div class="body-register">
                 <div class="container-register">
-                    <div class="title2">Login</div>
+                    <div class="title2">Formulario de contacto</div>
                     <div class="content">
                         <form onSubmit={handleSubmit}>
                             <div class="user-details">
