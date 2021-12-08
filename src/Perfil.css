@@ -75,3 +75,37 @@
     display: flex;
     justify-content: flex-end;
 }
+
+
+@media screen and (max-width:500px) {
+
+    .profile-title {
+        font-size: 35px;
+        color: var(--black1);
+        margin-left: 15px;
+    }
+
+    .profile-info {
+        display: flex;
+        margin: 10px 0 30px 0;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .img-profile {
+        width: 160%;
+        height: 100%;
+    }
+
+    .profile-button {
+        margin: 0 15px 15px;
+        width: 100px;
+        height: 40px;
+    }
+
+    .profile-content-text {
+        margin-top: 15px;
+        width: 200px;
+        margin-bottom: 20px;
+    }
+}
