@@ -14,29 +14,19 @@ export const Informacion = () => {
                         <form>
                             <div class="user-details">
                                 <div class="input-box">
+                                    <span class="details">Correo</span>
+                                    <input type="email" placeholder="Ingresa tu correo" required></input>
+                                </div>
+                                <div class="input-box">
                                     <span class="details">Asunto</span>
-                                    <input type="text" placeholder="Ingresa tus nombres"  required></input>
+                                    <input type="text" placeholder="Ingresa el asunto" required></input>
                                 </div>
                                 <div class="input-box">
-                                    <span class="details">Apellidos</span>
-                                    <input type="text" placeholder="Ingresa tus apellidos" required></input>
-                                </div>
-                                <div class="input-box">
-                                    <span class="details">Tipo de documento</span>
-                                    <select required >
-                                        <option selected value="">Tipo de documento</option>
-                                        <option value="1">Tarjeta de identidad</option>
-                                        <option value="2">Cedula de ciudania</option>
-                                        <option value="3">Pasaporte</option>
-                                    </select>
-                                </div>
-                                <div class="input-box">
-                                    <span class="details">Documento</span>
+                                    <span class="details">Contenido</span>
                                     <input type="text" placeholder="Ingresa tu documento" required></input>
                                 </div>
                             </div>
                             <div class="button">
-                                {/* <NavLink to={`/CBQ`}></NavLink> */}
                                 <input type="submit" value="Iniciar" ></input>
                             </div>
                         </form>
