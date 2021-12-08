@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link, NavLink } from "react-router-dom";
 
 class Footer extends Component {
     render(){
@@ -20,7 +21,12 @@ class Footer extends Component {
                     </div>
                     <div className="item__contact item__contact--gold">
                         <i className='bx bxs-chat contact__icon contact__icon--modifier' ></i>
-                        <h3 className="contact__title">Contactanos ahora</h3>
+
+                        <a className="contact__title">
+                            <div >
+                                <NavLink  to={`/contacto`}>Más información</NavLink>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </footer>

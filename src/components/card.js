@@ -10,7 +10,7 @@ class Card extends Component {
                     <p className="card_list">{this.props.card_list}</p>
                     <h3 className="card_title">{this.props.card_title}</h3>
                     <p className="card_copy">{this.props.card_text}</p>
-                    <a href="#" className="card_button">{this.props.card_button}</a>
+                    
                 </div>
             </div>
         )
@@ -18,3 +18,5 @@ class Card extends Component {
 }
 
 export default Card;
+
+//<a href="#" className="card_button">{this.props.card_button}</a>
