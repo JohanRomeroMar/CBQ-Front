@@ -62,8 +62,7 @@ const Users = () => {//componente de estados
                                         <p className="users-information">Tipo de usuario: {"estudiente"}</p>
                                     </div>
                                     <div className="button">
-                                        <NavLink className="delete-a" to={`/actualizar/${item._id}`}>Actualizar</NavLink>
-                                        <button className="delete" type="button" onClick={() => handleOnDelete(item._id)}>Eliminar</button>
+                                        <NavLink className="delete-a" to={`/actualizar/${item._id}`}>ver resultados</NavLink>
                                     </div>
                                 </div>
                             </div>
