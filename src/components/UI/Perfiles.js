@@ -56,7 +56,7 @@ export const Perfiles = () => {
                         </div>
                     </div>
                     <div class="profile-button-container">
-                        <div className="button">
+                        <div className="card-button">
                             <NavLink className="delete-a" to={`/`}>Regresar</NavLink>
                         </div>
                     </div>
