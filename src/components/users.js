@@ -3,25 +3,10 @@ import React, { Component, useEffect, useState } from 'react';
 import { Link, NavLink } from "react-router-dom";
 
 const Users = () => {//componente de estados
-    const [nombre, setNombre] = useState()
-    const [email, setEmail] = useState()
-    const [pass, setPass] = useState()
     const [users, setUsers] = useState()
 
-    const postUsers = async (data) => {
-        return axios.post('http://localhost:4000/api/auth/register', data);
-    }
     const getUsers = async () => {
         return axios.get('http://localhost:4000/api/auth/users');
-    }
-    const deleteUser = async (id) => {
-        return axios.delete(`http://localhost:4000/api/auth/user/${id}`);
-    }
-
-    const handleOnDelete = (id) => {
-        deleteUser(id).then(result => {
-            setUsers(users.filter(item => item._id != id));
-        })
     }
 
     useEffect(() => {//solo ejecuta cuando entra
@@ -30,21 +15,6 @@ const Users = () => {//componente de estados
         })
     }, [])
 
-    useEffect(() => {
-        console.log(users);
-    }, [users])
-
-    useEffect(() => {//efectos cuando cambia
-        console.log(nombre);
-    }, [nombre])
-
-    useEffect(() => {
-        console.log(email);
-    }, [email])
-
-    useEffect(() => {
-        console.log(pass);
-    }, [pass])
     return (
         <>
             {
