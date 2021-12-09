@@ -2,6 +2,7 @@ import axios from 'axios';//peticiones
 import React, { Component, useEffect, useState, useContext } from 'react';
 import { usecontext } from '../Hooks/useContext';
 import { useHistory } from "react-router-dom";
+import { cities } from '../DB/cities'
 
 const Register = () => {
     const [fName, setFirstName] = useState()
@@ -12,16 +13,26 @@ const Register = () => {
     const [email, setEmail] = useState()
     const [phoneNum, setPhoneNum] = useState()
     const [gender, setGender] = useState()
+    //const [departamentos, setDepartamentos] = useState()
+    const [dataDepartamentos, setDataDepartamentos] = useState("Amazonas")
+    const [dataCiudades, setDataCiudades] = useState()
 
     const history = useHistory()
     //const [CBQA,]
 
     const { datos, setDatos } = useContext(usecontext)
 
+    const departamentos = cities.map((departamento,  i) => cities[i].departamento)
+
+    const ciudades = cities.find((municipios, i) => cities[i].departamento == dataDepartamentos)
+    useEffect(() => {
+        setDataCiudades(ciudades.ciudades[0])
+    }, [departamentos])
+
     const handleSubmit = (e) => {
         e.preventDefault();
         const data = {
-            fName, lName, docType, doc, birthDate, email, phoneNum, gender
+            fName, lName, docType, doc, birthDate, email, phoneNum, gender, dataDepartamentos, dataCiudades
         }
         setDatos(data);
         history.replace('/CBQ')
@@ -107,6 +118,30 @@ const Register = () => {
                                         <option value="3">Prefiero no decirlo</option>
                                     </select>
                                 </div>
+                                <div class="input-box">
+                                    <span class="details">Departamento</span>
+                                    <select aria-label="Genero" onChange={(e) => { setDataDepartamentos(e.target.value) }} >
+                                        <option disabled value={0}>selecciona un departamento</option>
+                                        {
+                                            departamentos.map(i => (
+                                                <option value={i}>{i}</option>
+                                            ))
+                                        }
+                                    </select>
+                                </div>
+                                {dataDepartamentos && 
+                                <div class="input-box">
+                                <span class="details">Ciudad</span>
+                                <select aria-label="Genero" onChange={(e) => { setDataCiudades(e.target.value) }} >
+                                    {ciudades &&
+                                        ciudades.ciudades.map(i => (
+                                            <option value={i}>{i}</option>
+                                        ))
+                                    }
+                                </select>
+                            </div>
+                                }
+                                
                             </div>
                             <div class="button">
                                 {/* <NavLink to={`/CBQ`}></NavLink> */}

@@ -2,6 +2,7 @@ import axios from 'axios';//peticiones
 import React, { Component, useEffect, useState, useContext } from 'react';
 import { usecontext } from '../Hooks/useContext';
 import { useParams } from 'react-router';
+import { useHistory } from "react-router-dom";
 
 const CBQVF = () => {
     //preguntas numericas
@@ -24,6 +25,7 @@ const CBQVF = () => {
 
     const {datos, setDatos} = useContext(usecontext)
     
+    const history = useHistory();
 
 
     const postUsers = async (data) => {
@@ -33,14 +35,16 @@ const CBQVF = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const data = [CBQV1, CBQV2, CBQV3, CBQV4, CBQV5, CBQV6, CBQV7, CBQV8, CBQV9, CBQV10, CBQV11, CBQVO3, CBQVO6]
-        setCBQVA({...datos,CBQVA:data})
-       
+        setCBQVA({...datos,CBQVA:data})       
     }
     useEffect(() => {
         console.log(CBQVA);
         if(CBQVA){
             postUsers(CBQVA).then(result => {
                 console.log('usuario guardado');
+                alert('gracias por llenar el formulario');
+
+                history.replace('/');
             }
         );}
     }, [CBQVA])

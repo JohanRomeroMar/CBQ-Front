@@ -50,7 +50,18 @@ const Update = () => {
         })
     }, [])
 
-//<div>{`${CBQA[1]}`}</div>
+    let CBQAC = []
+
+    // const CBQTrasnform = () =>{
+    //     if(CBQA){
+    //         return CBQA.array.forEach(element => {
+    //             if(element == 1){
+    //                 CBQAC.push
+    //             }
+    //         });
+    //     }
+    // }
+    
 
     useEffect(()=>{
         
@@ -64,16 +75,6 @@ const Update = () => {
         }
     }
 
-    
-
-    useEffect(() => {
-        console.log(docType);
-    }, [docType])
-
-    useEffect(() => {
-        console.log(gender);
-    }, [gender])
-
     return (
         <>
             <div className="body-register">
@@ -81,9 +82,15 @@ const Update = () => {
                     <div className="title2">Datos del estudiante</div>
                     <div className="content">
                         <form>
+                            <div className="button">
+                                <NavLink className="delete-a" to={`/Users/`}>Volver</NavLink>
+                            </div>
+                            <div className="button">
+                                <NavLink className="delete-a" to={`/`}>Inicio</NavLink>
+                            </div>
                             <div className="user-details">
                                 <div className="input-box">
-                                    <span className="details" value={`${fName}`}>Nombres {`${fName}`}</span>
+                                    <span className="details" value={`${fName}`}>Nombres </span>
                                     <div>{`${fName}`}</div>
                                 </div>
                                 <div className="input-box">
@@ -111,15 +118,11 @@ const Update = () => {
                                     <span className="details">Genero</span>
                                     <div>{`${gender}`}</div>
                                 </div>
-                                <div className="input-box">
-                                    <span className="details">pregunta 1</span>
-                                    
+                                <div className="button">
+                                        <NavLink className="delete-a" to={`/CBQA/${id}`}>Respuestas CBQ</NavLink>
                                 </div>
                                 <div className="button">
-                                        <NavLink className="delete-a" to={`/Users/`}>Volver</NavLink>
-                                </div>
-                                <div className="button">
-                                        <NavLink className="delete-a" to={`/`}>Inicio</NavLink>
+                                        <NavLink className="delete-a" to={`/CBQVA/${id}`}>Respuestas CBQ-V</NavLink>
                                 </div>
                             </div>
                         </form>

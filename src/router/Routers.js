@@ -17,6 +17,8 @@ import { UpdatePage } from '../components/UI/UpdatePage';
 import { CBQ } from '../components/UI/CBQ';
 import { CBQV } from '../components/UI/CBQV';
 import { IniciarSesion } from '../components/UI/IniciarSesion';
+import { CBQAU } from '../components/UI/CBQAU';
+import { CBQVAU } from '../components/UI/CBQVAU';
 import { Error } from '../components/UI/Error';
 import { usecontext } from '../Hooks/useContext';
 
@@ -36,7 +38,9 @@ export const Routers = () => {
               <Route exact path="/contacto" component={Contacto} />
               <Route exact path="/users" component={Usuarios} />
               <Route exact path="/CBQ" component={CBQ} />
+              <Route exact path="/CBQA/:id" component={CBQAU} />
               <Route exact path="/CBQV" component={CBQV} />
+              <Route exact path="/CBQVA/:id" component={CBQVAU} />
               <Route exact path="/login" component={IniciarSesion}/>
               <Redirect exact to="/error" component={Error} />
           </Switch>

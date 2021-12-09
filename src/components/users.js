@@ -59,7 +59,7 @@ const Users = () => {//componente de estados
                                     <div className="users-info">
                                         <p className="users-information">Nombre:  {item.fName + " " + item.lName}</p>
                                         <p className="users-information">Documento: {item.doc}</p>
-                                        <p className="users-information">Tipo de usuario: {"estudiente"}</p>
+                                        <p className="users-information">Tipo de usuario: {"estudiante"}</p>
                                     </div>
                                     <div className="button">
                                         <NavLink className="delete-a" to={`/actualizar/${item._id}`}>ver resultados</NavLink>
