@@ -83,10 +83,8 @@ const Update = () => {
                     <div className="content">
                         <form>
                             <div className="button">
-                                <NavLink className="delete-a" to={`/Users/`}>Volver</NavLink>
-                            </div>
-                            <div className="button">
-                                <NavLink className="delete-a" to={`/`}>Inicio</NavLink>
+                                <NavLink className="delete-b" to={`/Users/`}>Volver</NavLink>
+                                <NavLink className="delete-b" to={`/`}>Inicio</NavLink>
                             </div>
                             <div className="user-details">
                                 <div className="input-box">
@@ -119,10 +117,10 @@ const Update = () => {
                                     <div>{`${gender}`}</div>
                                 </div>
                                 <div className="button">
-                                        <NavLink className="delete-a" to={`/CBQA/${id}`}>Respuestas CBQ</NavLink>
+                                        <NavLink className="delete-b" to={`/CBQA/${id}`}>Respuestas CBQ</NavLink>
                                 </div>
                                 <div className="button">
-                                        <NavLink className="delete-a" to={`/CBQVA/${id}`}>Respuestas CBQ-V</NavLink>
+                                        <NavLink className="delete-b" to={`/CBQVA/${id}`}>Respuestas CBQ-V</NavLink>
                                 </div>
                             </div>
                         </form>

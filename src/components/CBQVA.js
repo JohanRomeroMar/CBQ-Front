@@ -55,7 +55,7 @@ const CBQVA = () => {
                 <div  class="main-CBQ">
                     <div class="container-CBQ">
                         <div className="button">
-                            <NavLink className="delete-a" to={`/actualizar/${id}`}>volver</NavLink>
+                            <NavLink className="delete-b" to={`/actualizar/${id}`}>volver</NavLink>
                         </div>
                         <div class="title-CBQ">CBQ-V</div>
 
